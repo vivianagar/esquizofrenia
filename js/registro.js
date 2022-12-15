@@ -38,12 +38,16 @@ $(document).ready(function(){
                 "PREGUNTA" :"¿Usted ha tenido alguno de los siguientes episodios?",
                 "OPCIONES" :[
                     { 
-                        "option":"En los últimos días se ha tornado más agresivo", 
+                        "option":"Psicóticos", 
+                        "respuesta": ($("#form_2_2").is(':checked'))?"SI":"NO"
+                    },
+                    { 
+                        "option":"Agresivos", 
                         "respuesta": ($("#form_2_1").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Ha tenido episodio psicoticos", 
-                        "respuesta": ($("#form_2_2").is(':checked'))?"SI":"NO"
+                        "option":"Ninguna de las anteriores", 
+                        "respuesta": ($("#form_2_3").is(':checked'))?"SI":"NO"
                     }
                 ]
             },
@@ -51,16 +55,20 @@ $(document).ready(function(){
                 "PREGUNTA" :"Durante este periodo ud ha:",
                 "OPCIONES" :[
                     { 
-                        "option":"Consumido bebidas alcohólicas", 
+                        "option":" Bebidas alcohólicas", 
                         "respuesta": ($("#form_3_1").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Consumido tabaco", 
+                        "option":"Tabaco", 
                         "respuesta": ($("#form_3_2").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Consumido sustancias psicoactivas", 
+                        "option":"Sustancias psicoactivas", 
                         "respuesta": ($("#form_3_3").is(':checked'))?"SI":"NO"
+                    },
+                    { 
+                        "option":"Ninguna de las anteriores", 
+                        "respuesta": ($("#form_3_4").is(':checked'))?"SI":"NO"
                     }
                 ]
             },
@@ -80,15 +88,15 @@ $(document).ready(function(){
                         "respuesta": ($("#form_4_3").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Sufrido depresión", 
+                        "option":"Depresión", 
                         "respuesta": ($("#form_4_4").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Tenido dificultad para adaptarse a entornos ", 
+                        "option":"Dificultad para adaptarse a entornos ", 
                         "respuesta": ($("#form_4_5").is(':checked'))?"SI":"NO"
                     },
                     { 
-                        "option":"Tenido dificultades afectivas", 
+                        "option":"Dificultades afectivas", 
                         "respuesta": ($("#form_4_6").is(':checked'))?"SI":"NO"
                     }
                 ]

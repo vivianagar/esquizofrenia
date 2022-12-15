@@ -33,7 +33,6 @@ $(document).ready(function(){
               "<td>"+citas[i]["DOCUMENTO"]+"</td>"+
               "<td>"+citas[i]["EMAIL"]+"</td>"+
               "<td>"+citas[i]["CIUDAD"]+"</td>"+
-              "<td>"+citas[i]["DIRECCION"]+"</td>"+
               "<td>"+citas[i]["MOTIVO_CONSULTA"]+"</td>"+
               "<!--td>"+get_answers(citas[i]["PREGUNTAS"])+"</td-->"+
               "<td align='center'>"+
