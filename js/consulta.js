@@ -37,6 +37,7 @@ $(document).ready(function(){
               "<!--td>"+get_answers(citas[i]["PREGUNTAS"])+"</td-->"+
               "<td align='center'>"+
                   "<button type='button' class='btn btn-outline-primary btn-circle mr4px edit' alt='"+citas[i]["ID"]+"'>Editar</button>"+
+                  "<button type='button' class='btn btn-outline-success btn-circle mr4px view' alt='"+citas[i]["ID"]+"'>Respuestas</button>"+
                   "<button type='button' class='btn btn-outline-danger btn-circle mr4px delete' alt='"+citas[i]["ID"]+"'>Eliminar</button>"+
               "</td>"+
             "</tr>";
@@ -69,6 +70,13 @@ $(document).ready(function(){
             mostrarDatos(idcita);
         }
     });
+
+    $( "#body_table" ).on( "click", ".view", function() {
+        if($(this).hasClass("view")){
+            let idcita = parseInt($(this).attr("alt"));
+            mostrarRespuesta(idcita);
+        }
+    });
     
     function mostrarDatos(id){
       for (var i=0; i<citas.length; i++) {
@@ -88,6 +96,17 @@ $(document).ready(function(){
       var editarModal = new bootstrap.Modal(document.getElementById('editarModal'), { keyboard: false })
       editarModal.show();
     }
+
+    function mostrarRespuesta(id){
+        for (var i=0; i<citas.length; i++) {
+          if (citas[i]["ID"]==id) {
+            let ans = get_answers(citas[i]["PREGUNTAS"]);
+            $("#respuesta").html(ans);
+          }
+        }
+        var respuestasModal = new bootstrap.Modal(document.getElementById('respuestasModal'), { keyboard: false })
+        respuestasModal.show();
+      }
     
     //Botón crear registro
     $("#saveData").click(function(){

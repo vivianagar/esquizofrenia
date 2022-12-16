@@ -1,13 +1,13 @@
 <?php
 
 //Evitar cache, para trabajar en tiempo real
-date_default_timezone_set('America/Bogota');
-header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
-header("Access-Control-Allow-Origin: *");
-
-//LLamado a las funciones
 header("Content-type:application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Cache-Control: no-cache, must-revalidate");
+
+
 require_once ('MySQL/functions.php');
 $db = get_conection();
 //Recibira el siguiente parametro
